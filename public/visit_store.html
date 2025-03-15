@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장 방문</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #e7f5fc, #ffffff);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .message-text {
+            text-align: center; /* 텍스트 정렬 */
+            font-size: 16px; /* 필요에 따라 글자 크기 조정 */
+            line-height: 1.5; /* 텍스트 줄 간격 */
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .back-button {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .cat-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cat-container img {
+            width: 150px;
+            height: auto;
+        }
+
+        .cat-container p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .message-container {
+            display: flex;
+            justify-content: center; /* 텍스트를 가로 중앙 정렬 */
+            align-items: center; /* 텍스트를 세로 중앙 정렬 */
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center; /* 텍스트를 중앙에 정렬 */
+        }
+
+        .message-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .message-text span {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .message-icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .next-button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 480px) {
+            .cat-container img {
+                width: 120px;
+            }
+
+            .cat-container p {
+                font-size: 16px;
+            }
+
+            .message-text {
+                font-size: 14px;
+            }
+
+            .message-icon img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .next-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button"></div>
+    </div>
+
+    <div class="cat-container">
+        <img src="./starbucksLogo.png" alt="store_image">
+        <p>스타벅스 매장을 방문하셨어요</p>
+    </div>
+
+    <div class="message-container">
+        <div class="message-text">
+            해당 매장은 <span>키오스크가 있는 </span>매장이에요.
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <button class="next-button">다음</button>
+    </div>
+</body>
+</html>

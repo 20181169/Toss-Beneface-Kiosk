@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 추천</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e7f5fc, #ffffff); /* 옅은 파란색과 흰색의 그라디언트 */
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 40px auto; /* 아래 공간을 조금 늘림 */
+            padding: 35px 20px; /* 내부 위아래 공간을 조금 늘림 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin: 35px 0; /* 제목 상하 간격을 조금 늘림 */
+            text-align: center;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin: 25px 0; /* 항목 사이 간격을 조금 늘림 */
+        }
+
+        .benefit-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .benefit-item span {
+            font-size: 16px;
+            color: #333;
+            flex: 1;
+        }
+
+        .notice {
+            margin-top: 25px; /* 공지 위쪽 간격을 조금 늘림 */
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .notice strong {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 25px; /* 버튼 위쪽 간격을 조금 늘림 */
+        }
+
+        .start-button {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .start-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 15px; /* 모바일에서 적절히 조정 */
+                margin: 30px auto;
+            }
+
+            .header {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .benefit-item img {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            .benefit-item span {
+                font-size: 14px;
+            }
+
+            .notice {
+                font-size: 13px;
+            }
+
+            .start-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">카드 추천</div>
+        <div class="title">최적의 카드를 추천받아요</div>
+
+        <div class="benefit-item">
+            <img src="./moneyLogo.png" alt="money_image">
+            <span>현재까지 20억을 할인받았어요.</span>
+        </div>
+        <div class="benefit-item">
+            <img class="icon" src="./avarage.png" alt="avage_image">
+            <span>또래들은 평균 40억을 할인받았어요.</span>
+        </div>
+        <div class="benefit-item">
+            <img class="icon" src="./gift.png" alt="gift_image">
+            <span>현 매장에서는 사람들이 평균 30억을 할인받아요</span>
+        </div>
+
+        <div class="notice">
+            <strong>보유한 카드들 중 최적의 카드 선택 안내</strong>
+            <ul>
+                <li>전월 실적에 따라 추천받는 카드가 달라져요.</li>
+                <li>당월 실적에 따라 추천받는 카드가 달라져요.</li>
+                <li>카드별로 받을 수 있는 최대 혜택에 따라 추천받는 카드가 달라져요요</li>
+                <li>카드를 사용하는 일에 따라 추천받는 카드가 달라져요.</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="start-button">시작하기</button>
+        </div>
+    </div>
+</body>
+</html>

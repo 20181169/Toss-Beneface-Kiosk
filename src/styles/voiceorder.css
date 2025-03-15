@@ -1,0 +1,140 @@
+/* 전체 컨테이너 */
+.voice-order-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 혹은 필요에 맞게 조정 */
+    background-color: #2b2b2b; /* 어두운 배경 */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 상단 상태 표시줄 */
+  .status-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px; /* 적절히 조정 */
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .time {
+    font-size: 14px;
+  }
+  
+  .status-icons span {
+    margin-right: 5px;
+  }
+  
+  /* 헤더 (메뉴 버튼, 타이틀) */
+  .header {
+    position: absolute;
+    top: 40px; /* status-bar 아래쪽 */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* "Speak now" 버튼 */
+  .speak-now-btn {
+    margin-top: 100px; /* 헤더 아래 적당한 간격 */
+    background-color: #00b2ff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .speak-now-btn:hover {
+    background-color: #0091cc;
+  }
+  
+  /* 마이크 및 원형 효과 감싸는 컨테이너 */
+  .microphone-container {
+    position: relative;
+    margin-top: 40px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 마이크 아이콘 */
+  .microphone-icon {
+    font-size: 40px;
+    color: #f1c40f; /* 노란색(골드) 계열 */
+    position: absolute;
+  }
+  
+  /* 동그라미(진동 원) 예시 */
+  .circle {
+    position: absolute;
+    border: 2px solid #00b2ff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: pulse 2s infinite;
+  }
+  
+  /* 원을 크기 다르게 3개를 겹쳐서 효과 */
+  .circle1 {
+    animation-delay: 0s;
+  }
+  .circle2 {
+    animation-delay: 0.4s;
+  }
+  .circle3 {
+    animation-delay: 0.8s;
+  }
+  
+  /* 원 커졌다가 작아지는 에니메이션 */
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    70% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+  
+  /* 하단 정보 버튼 */
+  .info-button {
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+  }

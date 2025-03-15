@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추천메뉴</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .back-button {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .header .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .menu-tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-tabs button {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        .menu-tabs button.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-item .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 12px;
+        }
+
+        .menu-item .badge.popular {
+            background-color: #007bff;
+        }
+
+        .menu-item .badge.new {
+            background-color: #ff4d4d;
+        }
+
+        .menu-item .name {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .menu-item .price {
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">←</div>
+        <div class="title">추천메뉴</div>
+        <div class="refresh-button">⟳</div>
+    </div>
+
+    <div class="menu-tabs">
+        <button class="active">추천메뉴</button>
+        <button>커피</button>
+        <button>요거트</button>
+        <button>과일주스</button>
+        <button>티</button>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="banana_latte.jpg" alt="바나나라떼">
+            <div class="badge popular">인기</div>
+            <div class="name">바나나라떼</div>
+            <div class="price">3,000원</div>
+        </div>
+        <div class="menu-item">
+            <img src="caramel_latte.jpg" alt="카라멜라떼">
+            <div class="name">카라멜라떼</div>
+            <div class="price">4,000원</div>
+        </div>
+        <div class="menu-item">
+            <img src="grapefruit_ade.jpg" alt="자몽에이드">
+            <div class="name">자몽에이드</div>
+            <div class="price">4,500원</div>
+        </div>
+        <div class="menu-item">
+            <img src="blueberry_yogurt.jpg" alt="블루베리요거트">
+            <div class="badge new">신규</div>
+            <div class="name">블루베리요거트</div>
+            <div class="price">5,000원</div>
+        </div>
+        <div class="menu-item">
+            <img src="plain_yogurt.jpg" alt="플레인요거트">
+            <div class="name">플레인요거트</div>
+            <div class="price">5,000원</div>
+        </div>
+        <div class="menu-item">
+            <img src="green_tea_latte.jpg" alt="그린티라떼">
+            <div class="name">그린티라떼</div>
+            <div class="price">5,000원</div>
+        </div>
+    </div>
+</body>
+</html>
